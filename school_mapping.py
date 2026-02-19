@@ -34,10 +34,24 @@ st.set_page_config(page_title="School Mapping Creator", page_icon="🏫", layout
 st.markdown(
     """
     <style>
-    /* Force white/light interface */
-    .stApp, [data-testid="stAppViewContainer"], main { background-color: #ffffff !important; }
-    section[data-testid="stSidebar"], [data-testid="stSidebar"] { background-color: #f8f9fa !important; }
-    .block-container { max-width: 780px; padding-top: 2rem; background: transparent !important; }
+    /* Force pure-white backgrounds everywhere */
+    html, body,
+    .stApp,
+    [data-testid="stAppViewContainer"],
+    [data-testid="stMain"],
+    [data-testid="stSidebar"],
+    section[data-testid="stSidebar"],
+    [data-testid="stHeader"] {
+      background-color: #ffffff !important;
+    }
+
+    /* Some Streamlit versions use these wrappers */
+    [data-testid="stAppViewContainer"] > .main,
+    [data-testid="stAppViewContainer"] > .main > div {
+      background-color: #ffffff !important;
+    }
+
+    .block-container { max-width: 780px; padding-top: 2rem; background-color: #ffffff !important; }
     div[data-testid="stStatusWidget"] { display: none; }
     .stTabs [data-baseweb="tab-list"] { gap: 2rem; }
     /* Light inputs and cards */

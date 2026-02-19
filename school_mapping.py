@@ -34,7 +34,7 @@ st.set_page_config(page_title="School Mapping Creator", page_icon="🏫", layout
 st.markdown(
     """
     <style>
-    /* Force pure-white backgrounds everywhere */
+    /* Force pure-black backgrounds everywhere */
     html, body,
     .stApp,
     [data-testid="stAppViewContainer"],
@@ -42,21 +42,26 @@ st.markdown(
     [data-testid="stSidebar"],
     section[data-testid="stSidebar"],
     [data-testid="stHeader"] {
-      background-color: #ffffff !important;
+      background-color: #000000 !important;
+      color: #ffffff !important;
     }
 
     /* Some Streamlit versions use these wrappers */
     [data-testid="stAppViewContainer"] > .main,
     [data-testid="stAppViewContainer"] > .main > div {
-      background-color: #ffffff !important;
+      background-color: #000000 !important;
     }
 
-    .block-container { max-width: 780px; padding-top: 2rem; background-color: #ffffff !important; }
+    .block-container { max-width: 780px; padding-top: 2rem; background-color: #000000 !important; }
     div[data-testid="stStatusWidget"] { display: none; }
     .stTabs [data-baseweb="tab-list"] { gap: 2rem; }
-    /* Light inputs and cards */
-    div[data-testid="stExpander"], div[data-baseweb="select"] > div,
-    [data-baseweb="input"] { background-color: #ffffff !important; }
+    /* Dark inputs and cards */
+    div[data-testid="stExpander"],
+    div[data-baseweb="select"] > div,
+    [data-baseweb="input"] {
+      background-color: #111111 !important;
+      color: #ffffff !important;
+    }
     /* Logo container */
     div[data-testid="stImage"] img { border-radius: 8px; }
     </style>
